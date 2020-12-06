@@ -1,1 +1,76 @@
 <h1>SpaceX Launch Programs</h1>
+<div class="launch-container">
+    <div class="filter-container">
+        <mat-card>
+            <mat-card-content>
+                <h2>Filters</h2>
+                <div class="filter-header">Launch Year</div>
+                <div class="filter-list">
+                    <mat-button-toggle-group (change)="yearSelected($event)" name="filterYear" aria-label="Filter by Year">
+                        <mat-button-toggle value="2006">2006</mat-button-toggle>
+                        <mat-button-toggle value="2007">2007</mat-button-toggle>
+                        <mat-button-toggle value="2008">2008</mat-button-toggle>
+                        <mat-button-toggle value="2009">2009</mat-button-toggle>
+                        <mat-button-toggle value="2010">2010</mat-button-toggle>
+                        <mat-button-toggle value="2011">2011</mat-button-toggle>
+                        <mat-button-toggle value="2012">2012</mat-button-toggle>
+                        <mat-button-toggle value="2013">2013</mat-button-toggle>
+                        <mat-button-toggle value="2014">2014</mat-button-toggle>
+                        <mat-button-toggle value="2015">2015</mat-button-toggle>
+                        <mat-button-toggle value="2016">2016</mat-button-toggle>
+                        <mat-button-toggle value="2017">2017</mat-button-toggle>
+                        <mat-button-toggle value="2018">2018</mat-button-toggle>
+                        <mat-button-toggle value="2019">2019</mat-button-toggle>
+                        <mat-button-toggle value="2020">2020</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+                <div class="filter-header">Successful Launch</div>
+                <div class="filter-list">
+                    <mat-button-toggle-group (change)="launchSuccessSelected($event)" name="successfulLaunchFilter" aria-label="Successful Launch">
+                        <mat-button-toggle value="true">True</mat-button-toggle>
+                        <mat-button-toggle value="false">False</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+                <div class="filter-header">Successful Landing</div>
+                <div class="filter-list">
+                    <mat-button-toggle-group (change)="landSuccessSelected($event)" name="successfulLanding" aria-label="Successful Landing">
+                        <mat-button-toggle value="true">True</mat-button-toggle>
+                        <mat-button-toggle value="false">False</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+    <div class="list-container">
+        <div class="launch-content">
+            <mat-card *ngFor="let launch of launchList">
+                <img src="assets/SpaceX_CRS-9_Patch.png">
+                <div class="mission-name">{{launch.mission_name}} #{{launch.flight_number}}</div>
+                <div class="mission-id">
+                    <div class="mission-header">Mission Ids : </div>
+                    <div class="mission-value">
+                        <ul>
+                            <li *ngFor="let item of launch.mission_id">{{item}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="item-details">
+                    <span class="item-header">Launch Year : </span>
+                    <span class="item-value">{{launch.launch_year}}</span>
+                </div>
+                <div class="item-details">
+                    <span class="item-header">Successful launch : </span>
+                    <span class="item-value">{{launch.launch_success}}</span>
+                </div>
+                <div class="item-details">
+                    <span class="item-header">Successful Landing : </span>
+                    <span class="item-value">{{launch.rocket.first_stage.cores[0].land_success}}</span>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<div class="developer">
+    <span class="item-header">Developed By : </span>
+    <span class="item-value">Kaustav Das</span>
+</div>

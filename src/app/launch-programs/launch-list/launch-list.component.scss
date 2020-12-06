@@ -1,0 +1,136 @@
+::ng-deep {
+h1 {
+    margin: 0;
+    @media only screen and (max-width: 1024px) {
+        margin-left: 25px;
+    }
+    @media only screen and (max-width: 700px) {
+        margin-left: 10px;
+    }
+}
+.launch-container {
+    display: flex;
+    flex-direction: row;
+    @media only screen and (max-width: 1024px) {
+        margin-left: 25px;
+    }
+    @media only screen and (max-width: 700px) {
+        flex-direction: column;
+        flex: 1;
+        margin: 10px;
+    }
+    flex-wrap: wrap;
+    .filter-container {
+        width: 100%;
+        margin-top: 14px;
+        @media only screen and (min-width: 701px) {
+            width: 35%;
+        }
+        @media only screen and (min-width: 1025px) {
+            width: 20%;
+        }
+        h2 {
+            margin-bottom: 0px;
+        }
+        .filter-header {
+            margin: 5px 50px;
+            border-bottom: 1px solid;
+            text-align: center;
+        }
+        .filter-list {
+            width: 100%;
+            mat-button-toggle-group {
+                flex-wrap: wrap!important;
+                border: 0!important;
+                width: 100%;
+                mat-button-toggle {
+                    width: 25%;
+                    margin: 5px 12%;
+                    .mat-button-toggle-label-content {
+                        line-height: 25px;
+                    }
+                }
+            }
+            .mat-button-toggle-appearance-standard {
+                background-color: #76e297!important;
+            }
+            .mat-button-toggle-checked {
+                background-color: #2dbd23!important;
+            }
+        }
+    }
+    .list-container {
+        @media only screen and (min-width: 701px) {
+            margin: 10px;
+        }
+        display: flex;
+        flex: 1;
+        @media only screen and (min-width: 701px) {
+            flex: 2;
+        }
+        @media only screen and (min-width: 1025px) {
+            flex: 4;
+        }
+        .launch-content {
+            width: 100%;
+            .mat-card {
+                width: 100%;
+                vertical-align: bottom;
+                min-height: 440px;
+                @media only screen and (max-width: 700px) {
+                    width: 91%;
+                    margin-top: 15px;
+                }
+                display: inline-block;
+                @media only screen and (min-width: 701px) {
+                    width: 40%;
+                    margin: 5px;
+                }
+                @media only screen and (min-width: 1025px) {
+                    width: 21%;
+                    margin: 4px;
+                }
+                img {
+                    width: 100%;
+                    margin-bottom: 10px;
+                }
+                .mission-name {
+                    color: #4040a0;
+                    font-weight: 600;
+                    margin-bottom: 15px;
+                }
+                .mission-id {
+                    .mission-header {
+                        font-weight: 600;
+                    }
+                    .mission-value {
+                        ul {
+                            list-style-type: disc;
+                            margin: 4px 0px 10px;
+                            color: #4040a0;
+                        }
+                    }
+                }
+                .item-details {
+                    margin-bottom: 10px;
+                    .item-header {
+                        font-weight: 600;
+                    }
+                    .item-value {
+                        color: #4040a0;
+                    }
+                }
+            }
+        }
+    }
+}
+.developer {
+    text-align: center;
+    .item-header {
+        font-weight: 600;
+    }
+    .item-value {
+        color: #4040a0;
+    }
+}
+}

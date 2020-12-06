@@ -1,3 +1,4 @@
+import { MaterialModule } from './../material/material.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LaunchListComponent } from './launch-list/launch-list.component';
@@ -12,7 +13,8 @@ const launchRoutes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(launchRoutes)
+    RouterModule.forChild(launchRoutes),
+    MaterialModule
   ]
 })
 export class LaunchProgramsModule { }
