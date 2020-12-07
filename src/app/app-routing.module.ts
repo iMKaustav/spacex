@@ -3,10 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'launch-programs',
+    path: '',
     loadChildren: () => import('./launch-programs/launch-programs.module').then(m => m.LaunchProgramsModule)
   },
-  { path: '**', redirectTo: 'launch-programs' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({
