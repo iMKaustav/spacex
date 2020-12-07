@@ -1,6 +1,6 @@
 # SpacexUi
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0. This is a small, sample application that display SpaceX launch programs with details. Some filter options are also these to filter data by year, launch and success or failure.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.0. This is a small, sample application that display SpaceX launch programs with details. Some filter options are also these to filter data by year, launch and success or failure. This application has been designed following resposive way, so its compatible with any mobile, tablet and desktop devices.
 
 ## Demo
 
