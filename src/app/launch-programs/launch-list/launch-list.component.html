@@ -6,7 +6,7 @@
                 <h2>Filters</h2>
                 <div class="filter-header">Launch Year</div>
                 <div class="filter-list">
-                    <mat-button-toggle-group (change)="yearSelected($event)" name="filterYear" aria-label="Filter by Year">
+                    <mat-button-toggle-group class="year-event" (change)="yearSelected($event)" name="filterYear" aria-label="Filter by Year">
                         <mat-button-toggle value="2006">2006</mat-button-toggle>
                         <mat-button-toggle value="2007">2007</mat-button-toggle>
                         <mat-button-toggle value="2008">2008</mat-button-toggle>
@@ -26,14 +26,14 @@
                 </div>
                 <div class="filter-header">Successful Launch</div>
                 <div class="filter-list">
-                    <mat-button-toggle-group (change)="launchSuccessSelected($event)" name="successfulLaunchFilter" aria-label="Successful Launch">
+                    <mat-button-toggle-group class="launch-success-event" (change)="launchSuccessSelected($event)" name="successfulLaunchFilter" aria-label="Successful Launch">
                         <mat-button-toggle value="true">True</mat-button-toggle>
                         <mat-button-toggle value="false">False</mat-button-toggle>
                     </mat-button-toggle-group>
                 </div>
                 <div class="filter-header">Successful Landing</div>
                 <div class="filter-list">
-                    <mat-button-toggle-group (change)="landSuccessSelected($event)" name="successfulLanding" aria-label="Successful Landing">
+                    <mat-button-toggle-group class="land-success-event" (change)="landSuccessSelected($event)" name="successfulLanding" aria-label="Successful Landing">
                         <mat-button-toggle value="true">True</mat-button-toggle>
                         <mat-button-toggle value="false">False</mat-button-toggle>
                     </mat-button-toggle-group>

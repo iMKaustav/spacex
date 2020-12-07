@@ -19,9 +19,10 @@ jobs:
         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           ${{ runner.os }}-node-    
-    - name: Build
+    - name: Build and Test
       run: |
         npm install
+        npm run test -- --watch=false --code-coverage --no-progress --browsers=ChromeHeadlessNoSandbox
         npm run-script deploy
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
